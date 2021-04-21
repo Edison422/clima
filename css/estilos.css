@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.dis {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.dis__section{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% 20% 10% 60%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.box{
+    box-sizing: border-box;
+}
+
+.sidebar{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    padding: 0em;
+    grid-row:1/6;
+    border: 10px solid black;
+}
+.sidebar__busqueda{
+    grid-row-start: 1;
+    grid-row-end:2;
+    border: 1px solid red;
+    height:4%;
+    display: flex;
+    justify-content: center;
+    margin-top:.5em;
+    /* height:100%; */
+}
+.section{
+    background-color:#F6F6F8;
+    grid-column: 2 / 6;
+    grid-row-start:  1;
+    grid-row-end: 6;
+    border: 10px solid blue;
+}
+.section__usuario{
+    grid-row-start:1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end:6;
+    /* border: 3px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:.8em;
+    margin: .2em;
+    font-size:1.1em;
+}
+.section__diaSemana{
+    grid-row: 2/3;
+    grid-column: 1/6;
+    border:2px solid blue;
+}
+.section__elementos{
+    grid-row: 3/6;
+    grid-column: 1/6;
+    border: 3px solid green;
+
+}
+.section__usuario a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.section__usuario--pestañas{
+    width:12%;
+    display: flex;
+    justify-content:space-between;
+}
+.section__usuario--user{
+    display:flex;
+    width:15%;
+    justify-content: space-around;
+}
+
+#centigrados,  #farnhei{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:black;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
+#farnhei{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:white;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
+#farnhei a{
+    color: black;
+    font-size:.5em;
+    font-weight: 900;
+}
+#centigrados a{
+    color: white;
+    font-size:.5em;
+    font-weight: 900;
+}
+#icono__user{
+    font-size: x-large;
+}
+
+/* .section-semana{
+    grid-column: 1/;
+    border: 1px solid green;
+} */
+
+
