@@ -5,7 +5,7 @@ body{
 }
 .dis {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 20% 20% 20% 20% 20%;
     box-sizing: border-box;
     height: 100vh;
@@ -13,7 +13,7 @@ body{
 .dis__section{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 10% 20% 10% 60%;
+    grid-template-rows: 10% 20% 70%;
     box-sizing: border-box;
     height: 100vh;
 }
@@ -23,37 +23,89 @@ body{
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 50% 50%;
     box-sizing: border-box;
-    margin:1em;
-    
+    margin:4.28%;  
+}
+.dis__section--diaSemana{
+    display: grid;
+    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    grid-template-rows: 100%;
+}
+.mt0{
+    margin-top: 0 !important;
+
+}
+.mb0{
+    margin-bottom:0 !important;
 }
 .box{
     box-sizing: border-box;
 }
 
 .sidebar{
-    grid-column: 1/2;
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     padding: 0em;
     grid-row:1/6;
-    border: 10px solid black;
+    /* border: 10px solid black; */
 }
 .sidebar__busqueda{
-    grid-row-start: 1;
-    grid-row-end:2;
-    border: 1px solid red;
-    height:4%;
+    
+    /* border: 1px solid red; */
+    height:10%;
     display: flex;
-    justify-content: center;
-    margin-top:.5em;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top:1.2em; */
     /* height:100%; */
 }
+.search{
+    border: none;
+    height: 25%;
+    margin-left: .2em;
+}
+.inputL{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.search::-webkit-input-placeholder { color: black; } 
+
+.search:focus{
+    box-shadow: 10px 0 5px -2px #888 !important; 
+    -webkit-box-shadow: 10px 0 5px -2px #888 !important;
+    outline: none;
+}
+.sidebar__tiempo{
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.clima__hora{
+    width: 100%;
+}
+.climaSB, .horaSB{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+}
+.horaSB{
+    margin-left: 4px;
+}
+
 .section{
     background-color:#F6F6F8;
     grid-column: 2 / 6;
     grid-row-start:  1;
     grid-row-end: 6;
-    border: 10px solid blue;
+    /* border: 10px solid blue; */
+}
+#sidebar__tiempo--logo img{
+    width: 15em;
 }
 .section__usuario{
     grid-row-start:1;
@@ -65,19 +117,23 @@ body{
     justify-content: space-between;
     align-items: center;
     padding:.8em;
-    margin: .2em;
+    margin: .2em 3.8em;
     font-size:1.1em;
 }
 .section__diaSemana{
     grid-row: 2/3;
     grid-column: 1/6;
-    border:2px solid blue;
+    /* border:2px solid blue; */
+    margin: 0 5em;
 }
 .section__elementos{
     grid-row: 3/6;
     grid-column: 1/6;
-    border: 3px solid green;
+    margin: 0 8%;
+    margin-top:0px;
+    margin-bottom:30px;
 
+    /* border: 3px solid green; */
 }
 .section__usuario a{
     text-decoration: none;
@@ -86,7 +142,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .section__usuario--pestañas{
-    width:12%;
+    width:15%;
     display: flex;
     justify-content:space-between;
 }
@@ -114,6 +170,35 @@ body{
     width: 25px;
     border-radius: 100%;
 }
+#sidebar__tiempo--hora{
+    margin:0 0 0 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size:2em;
+    margin:none;
+    padding:none;
+}
+#C{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin-top: 0.19em;
+}
+#sidebar__tiempo--clima{
+    margin:0 0 0 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size:4em;
+    margin:none;
+    padding:none;
+}
+
+#gps a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:#F6F6F8;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
 #farnhei a{
     color: black;
     font-size:.5em;
@@ -130,8 +215,17 @@ body{
 .section__elementos--elemento{
     background-color: white;
     border-radius:10px;
-    margin:1em;
+    margin:10px;
 }
+.section__elemento--diaSemana{
+    width:90%;
+    height:70%;
+    background-color:white;
+    border-radius:6px;
+    margin-left: 5px;
+    
+}
+
 
 
 /* .section-semana{
