@@ -25,34 +25,19 @@ function calcTime(offset) {
 
 
 
+const gaugeElement = document.querySelector(".gauge");
 
+function setGaugeValue(gauge, value) {
+  if (value < 0 || value > 1) {
+    return;
+  }
 
-let navigator;
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+    value * 100
+  )}%`;
+}
 
-navigator.geolocation.getCurrentPosition(function(position) {
-    haz_algo(position.coords.latitude, position.coords.longitude);
-  });
-
-
-$(document).ready(function () {
-    //Click al boton para pedir permisos
-    $("#pedirvan").click(function () {
-        //Si el navegador soporta geolocalizacion
-        if (!!navigator.geolocation) {
-            //Pedimos los datos de geolocalizacion al navegador
-            navigator.geolocation.getCurrentPosition(
-                    //Si el navegador entrega los datos de geolocalizacion los imprimimos
-                    function (position) {
-                        window.alert("nav permitido");
-                        $("#nlat").text(position.coords.latitude);
-                        $("#nlon").text(position.coords.longitude);
-                    },
-                    //Si no los entrega manda un alerta de error
-                    function () {
-                        window.alert("nav no permitido");
-                    }
-            );
-        }
-    });
-
-});
+// setGaugeValue(gaugeElement, 1);
