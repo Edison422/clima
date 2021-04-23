@@ -23,6 +23,9 @@ function datosSidebar(json){
     document.getElementById('sidebar__tiempo--hora').innerText=`${calcTime(cambiar(json.timezone))}`;
     setGaugeValue(gaugeElement,json.clouds.all/100);
     document.getElementById('velVientohtml').innerHTML=json.wind.speed+`<span>km/h</span>`;
+    document.getElementById('tmax').innerHTML=(json.main.temp_max-273).toFixed(2);
+    document.getElementById('tmin').innerHTML=(json.main.temp_min-273).toFixed(2);
+
 
 
 }

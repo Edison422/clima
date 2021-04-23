@@ -228,6 +228,21 @@ body{
     justify-content:space-between;
     align-items: center;
 }
+
+.elementosR{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-wrap:wrap;
+}
+.textoTemp{
+    margin-left:30px;
+    font-family: 'Quicksand', sans-serif;
+}
+.f_negrita{
+    font-weight: 900;
+}
 .elementos__titulo{
     
     margin: 0 30px;
@@ -244,9 +259,7 @@ body{
     border-radius:10px;
     margin:10px;
 }
-.viento_velocidad{
 
-}
 
 .section__elemento--diaSemana{
     width:90%;
@@ -274,7 +287,26 @@ body{
     font-size: calc(.1em + 1vw);
     margin-top: 1em;
 }
+.logoArrow {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.nota{
+    display:flex;
+    flex-direction:column;
+}
+.temperaturas{
+    display: flex;
+    flex-direction: column;
+    
+}
 
+.logoArrow img{
+    width:20%;
+    height:20%;
+    margin-left: 20px;
+}
 .gauge {
     width: 70%;
     max-width: 250px;
