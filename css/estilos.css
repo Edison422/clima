@@ -29,7 +29,7 @@ body{
 }
 .dis__section--diaSemana{
     display: grid;
-    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 100%;
 }
 .mt0{
@@ -249,7 +249,6 @@ body{
     font-weight: 900;
 }
 .elementos__titulo{
-    
     margin: 0 30px;
     font-family: 'Quicksand', sans-serif;
     opacity: .7;
@@ -317,8 +316,49 @@ body{
     margin-top:.6em;
     margin-bottom:0;
 }
-.visibilidad span{
 
+.diaSemana__titulo{
+    display: flex;
+    justify-content:center;
+    margin-top: 3px;
+    margin-bottom: 0;
+    /* border: 1px solid black; */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+}
+.diaSemana__elemento{
+    /* border: 1px solid red; */
+    margin-top:0;
+    height: 70%;
+    display: flex;
+}
+
+.semanaLogo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:50%;
+    height:100%;
+    /* border: 1px solid black;    */
+}
+.semanaInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width:50%;
+    height:100%;
+    /* border: 1px solid black;    */
+}
+.semanaInfoMax, .semanaInfoMin{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+    height:50%;
+    /* border: 1px solid black; */
+    font-size: .6em;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .logoArrow img{
@@ -397,7 +437,7 @@ body{
       display: flex;
       flex-direction: column;
       align-items:center;
-      border:1px solid black;
+      /* border:1px solid black; */
       height:50%;
   }
   .info{
@@ -405,7 +445,7 @@ body{
       align-items: center; 
       width: 80%;
       height: 50%;
-      border: 1px solid black;
+      /* border: 1px solid black; */
   }
   .info img{
       width:22px;
@@ -416,10 +456,29 @@ body{
       font-family: 'Quicksand', sans-serif;
   }
   .imagenH{
-    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    /* border: 1px solid black; */
+    width: 80%;
+    height:90%;
+    position: relative;
   }
+  .imagenH img{
+    border-radius: 20px;
+    position:absolute;
+  }
+  .ciudad{
+      position: absolute;
+      font-size: 1.7em;
+      color:white;
+      font-family: 'Quicksand', sans-serif;
+      font-weight:700;
+
+  }
+
   .sidebar__pie--imagen{
-    border:1px solid red;
+    /* border:1px solid red; */
     height:50%;
     display: flex;
     justify-content: center;

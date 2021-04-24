@@ -47,7 +47,7 @@ function datosSidebar(json){
     }
   })();
 
-  document.getElementById('visibilidad').innerHTML=json.visibility/1000+`<span id='km'>km</span>`;
+  document.getElementById('visibilidad').innerHTML=(json.visibility/1000).toFixed(0)+`<span id='km'>km</span>`;
   
   bar2 = document.querySelector(".progress-bar2"),
   counter2 = document.querySelector(".count2"),
@@ -75,7 +75,36 @@ function datosSidebar(json){
       
     }
   })();
+  document.getElementById('direccion_viento').innerHTML=json.wind.deg;
+  document.getElementById('estado_clima').innerHTML=json.main.pressure;
+  document.getElementById('ciudadPais').innerHTML=`${json.sys.country} | ${json.name}`
 }
+
+function ejecutarBusquedaDias(){
+  let valor=llamar();
+  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${valor}&APPID=16ce1dfa3927bddc946d38382bae10ad`).then((res)=>{
+      res.json().then((jsonSemana)=>{
+          // console.log(jsonSemana);
+          datosDiaSemana(jsonSemana);
+      })
+  })
+}
+
+function datosDiaSemana(jsonSemana){
+  let j=1;
+  for(let i=4;i<39;i=i+8){
+    document.getElementById(`cont${j}`).innerHTML=(new Date(jsonSemana.list[i].dt_txt)).toString().split(' ')[0];
+    document.getElementById(`imgSemana${j}`).innerHTML=`<img src="https://openweathermap.org/img/wn/${jsonSemana.list[i].weather[0].icon}.png">`
+    document.getElementById(`${j}.1`).innerHTML='Max '+(jsonSemana.list[i].main.temp_min-273).toFixed(1)+'°C';
+    document.getElementById(`${j}.2`).innerHTML='Min '+(jsonSemana.list[i].main.temp_max-273).toFixed(1)+'°C';
+    ++j;
+  }
+
+
+
+}
+
+
 
 
 

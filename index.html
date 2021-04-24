@@ -25,7 +25,7 @@
                     />
                 </div>
                 <div id="gps">
-                    <a href="#" onclick='ejecutarBusqueda()' style="color:black; margin:0" ><ion-icon name="locate-sharp"></ion-icon></a>
+                    <a href="#" onclick='ejecutarBusqueda(), ejecutarBusquedaDias()' style="color:black; margin:0" ><ion-icon name="locate-sharp"></ion-icon></a>
                 </div>
             </div>
             <div class="sidebar__tiempo">
@@ -45,16 +45,17 @@
                 <div class='sidebar__pie--info'>
                     <div class='info'>
                         <img  src='/img/icons8-cloud-64.png'/>
-                        <p>Hola probando</p>
+                        <p id='estado_clima'>Hola probando</p>
                     </div>
                     <div class='info'>
                         <img src='/img/icons8-wind-64 (1).png'/></p>
-                        <p>Hola probando 2</p>
+                        <p id='direccion_viento'>10</p><p>°</p>
                     </div>
                 </div>
                 <div class='sidebar__pie--imagen'>
                     <div class='imagenH'>
-
+                        <img src='/img/Diseño sin título (3).png'>
+                        <div id='ciudadPais' class='ciudad'>EC | Ambato</div>
                     </div>
                 </div>
             </div>
@@ -77,25 +78,54 @@
             </div>
             <div class='section__diaSemana box dis__section--diaSemana'>
                 <div class='section__elemento--diaSemana'>
-
+                    <p class='diaSemana__titulo' id='cont1'>Hola</p>
+                    <div class='diaSemana__elemento box'> 
+                        <div id='imgSemana1' class='semanaLogo box'></div>
+                        <div class='semanaInfo box'>
+                            <div id='1.1' class='semanaInfoMax'>Max</div>
+                            <div id='1.2' class='semanaInfoMin'></div>
+                        </div>
+                    </div>
                 </div>
                 <div class='section__elemento--diaSemana'>
-                    
+                    <p class='diaSemana__titulo' id='cont2'>Hola</p>
+                    <div class='diaSemana__elemento box'> 
+                        <div id='imgSemana2' class='semanaLogo box'></div>
+                        <div class='semanaInfo box'>
+                            <div id='2.1' class='semanaInfoMax'>Max</div>
+                            <div id='2.2' class='semanaInfoMin'></div>
+                        </div>  
+                    </div>                  
                 </div>
                 <div class='section__elemento--diaSemana'>
-                    
+                    <p class='diaSemana__titulo' id='cont3'>Hola</p>
+                    <div class='diaSemana__elemento box'> 
+                        <div id='imgSemana3' class='semanaLogo box'></div>
+                        <div class='semanaInfo box'>
+                            <div id='3.1' class='semanaInfoMax'>Max</div>
+                            <div id='3.2' class='semanaInfoMin'></div>
+                        </div>  
+                    </div>    
                 </div>
                 <div class='section__elemento--diaSemana'>
-                    
+                    <p class='diaSemana__titulo' id='cont4'>Hola</p>
+                    <div class='diaSemana__elemento box'> 
+                        <div id='imgSemana4' class='semanaLogo box'></div>
+                        <div class='semanaInfo box'>
+                            <div id='4.1' class='semanaInfoMax'>Max</div>
+                            <div id='4.2' class='semanaInfoMin'></div>
+                        </div>  
+                    </div>       
                 </div>
                 <div class='section__elemento--diaSemana'>
-                    
-                </div>
-                <div class='section__elemento--diaSemana'>
-                    
-                </div>
-                <div class='section__elemento--diaSemana'>
-                    
+                    <p class='diaSemana__titulo' id='cont5'>Hola</p>
+                    <div class='diaSemana__elemento box'> 
+                        <div id='imgSemana5' class='semanaLogo box'></div>
+                        <div class='semanaInfo box'>
+                            <div id='5.1' class='semanaInfoMax'>Max</div>
+                            <div id='5.2' class='semanaInfoMin'></div>
+                        </div>  
+                    </div>      
                 </div>
             </div>
             <div class='section__elementos dis__section--elementos box'>
