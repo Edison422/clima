@@ -14,7 +14,7 @@
 <body>
     <div class="dis">
         <div class="sidebar box">
-            <div class="sidebar__busqueda box">
+            <div class="sidebar__busqueda box">  
                 <div class="inputL">
                     <ion-icon name="search-sharp"></ion-icon>
                     <input
@@ -25,7 +25,7 @@
                     />
                 </div>
                 <div id="gps">
-                    <a href="#" onclick='ejecutarBusqueda(), ejecutarBusquedaDias()' style="color:black; margin:0" ><ion-icon name="locate-sharp"></ion-icon></a>
+                    <a href="#" onclick='ejecutarBusqueda(), ejecutarBusquedaDias()' style="color:black; margin:0"><ion-icon name="locate-sharp"></ion-icon></a>
                 </div>
             </div>
             <div class="sidebar__tiempo">
@@ -176,6 +176,20 @@
                     <p class='elementos__titulo'>Probabilidad de lluvia</p>
                     <div class="progress-bar2"></div>
                     <h1 class="count2"></h1>
+                </div>
+            </div>
+            <div class="sidebar__busqueda--responsive box">  
+                <div class="inputD">
+                    <ion-icon name="search-sharp"></ion-icon>
+                    <input
+                        class="form-control border-0 search"
+                        type="text"
+                        placeholder="Search for places...."
+                        id="inputX"
+                    />
+                </div>
+                <div id="gps">
+                    <a href="#" onclick='ejecutarBusqueda(), ejecutarBusquedaDias()' style="color:black; margin:0"><ion-icon name="locate-sharp"></ion-icon></a>
                 </div>
             </div>
         </div>

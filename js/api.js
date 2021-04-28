@@ -4,6 +4,11 @@ function llamar(){
     console.log(busqueda);
     return busqueda;
 }
+function llamar(){
+  let busqueda=document.getElementById('inputX').value;
+  console.log(busqueda);
+  return busqueda;
+}
 
 //Ejecutar la llamada a la API
 function ejecutarBusqueda(){
@@ -99,10 +104,8 @@ function datosDiaSemana(jsonSemana){
     document.getElementById(`${j}.2`).innerHTML='Min '+(jsonSemana.list[i].main.temp_max-273).toFixed(1)+'°C';
     ++j;
   }
-
-
-
 }
+
 
 
 
